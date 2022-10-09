@@ -21,6 +21,7 @@ module.exports = {
       filename: "index.html",
       template: "src/index.html",
     }),
+    new MiniCssExtractPlugin()
   ],
   optimization: {
     minimizer: [`...`, new CssMinimizerPlugin()],
@@ -39,7 +40,8 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        use: ["style-loader", "css-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       },
     ],
   },
@@ -49,5 +51,5 @@ module.exports = {
   devServer: {
     compress: true,
     port: 9000,
-  },
+  }
 };

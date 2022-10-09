@@ -1,0 +1,14 @@
+.btn-cell {
+    width: 40px;
+    height: 40px;
+    background: white;
+}
+
+.btn-cell-live {
+    width: 40px;
+    height: 40px;
+    background: red;
+}
+.btn-cell-dead {
+    background: white;
+}
